@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class initials {
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		System.out.println("Insert Names:");
+		String exit = "Exit";
+		String initials = ("");
+		String name = ("");
+		String completeName = ("");
+		while (in.hasNextLine()) {
+			String userInput = in.nextLine();
+			if (!userInput.equalsIgnoreCase(exit)) {
+				name = userInput + " ";
+				completeName=completeName+""+name;
+				initials = initials + userInput.substring(0, 1);
+			} else {
+				System.out.println("Inisial " + completeName + " adalah " + initials);
+			}
+		}
+		System.out.println("end");
+	}
+}
