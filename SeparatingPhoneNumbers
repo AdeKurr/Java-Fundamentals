@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class SeparatingPhoneNumbers {
+	public static void main(String[] args) {
+		Scanner in=new Scanner(System.in);
+		System.out.println("Insert phone numbers: ");
+		String phoneNum = in.nextLine();
+		
+		int length =String.valueOf(phoneNum).length();
+		if (length ==9) {
+			String area = phoneNum.substring(0,3);
+			String front = phoneNum.substring(3,6);
+			String back = phoneNum.substring(6,9);
+			System.out.println("("+area+")"+" "+front+"-"+back);		
+		}
+		else if (length ==10) {
+			String area = phoneNum.substring(0,4);
+			String front = phoneNum.substring(4,7);
+			String back = phoneNum.substring(7,10);
+			System.out.println("("+area+")"+" "+front+"-"+back);	
+		}
+		else if (length ==11) {
+			String area = phoneNum.substring(0,4);
+			String front = phoneNum.substring(4,7);
+			String back = phoneNum.substring(7,11);
+			System.out.println("("+area+")"+" "+front+"-"+back);
+		}
+		else if (length>11 || length <9) {
+			System.out.println("Phone number is invalid.");
+		}
+	}
+}
+
