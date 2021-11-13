@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class CreatingRectangles {
+	public static void main(String[] args) {
+
+		Scanner in = new Scanner(System.in);
+		System.out.println("Insert the height of your rectangle:");
+		int rectangleHeight = in.nextInt();
+
+		for (int height = 0; height < rectangleHeight; height++) {
+			for (int asterisk = 0; asterisk < (height + 1); asterisk++) {
+				System.out.print("*");
+			}
+			for (int parenthesis = 0; parenthesis < (rectangleHeight - height - 1); parenthesis++) {
+				System.out.print("#");
+			}
+			System.out.println();
+		}
+	}
+}
