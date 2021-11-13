@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class AverageOfNumbers {
+	public static void main (String [] args) {
+		Scanner in = new Scanner (System.in);
+		System.out.println("Insert as many numbers as you may, then end with X (or any other letter)");
+		double x = 0;
+		double y = 0;
+		
+		while (in.hasNextInt()) {
+			double userInput = in.nextDouble();
+			x =x + userInput;
+			y++;
+			}
+		double avg = x/y;
+		System.out.println("The average of your numbers: "+avg);
+		}
+}
