@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class CreatingNumberedTriangles {
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		System.out.println("Insert the height of your triangle:");
+		int input = in.nextInt();
+
+		for (int height = 0; height < input; height++) {
+			for (int space = input; space > (height + 1); space--) {
+				System.out.print(" ");
+			}
+			for (int space = 0; space < (height + 1); space++) {
+				System.out.print(height + 1 - space);
+			}
+			System.out.println();
+		}
+	}
+}
